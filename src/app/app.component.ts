@@ -2,7 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 
-type Members = string[];
+type Member = string;
+
+// TODO: Change Member type into object with properties. And make sure to use it in the template
+
+// type Member = {
+//   name: string;
+// };
+
+type Members = Member[];
 
 @Component({
   selector: 'app-root',
