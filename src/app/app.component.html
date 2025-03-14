@@ -32,13 +32,6 @@
   </div>
 </div>
 
-<div *ngIf="teams.length" class="container">
-  <div *ngFor="let team of teams; let i = index" class='teams-container'>
-    <h3>Team {{ i + 1 }}</h3>
-    <ul class="list">
-      <li *ngFor="let member of team">{{ member }}</li>
-    </ul>
-  </div>
-</div>
+<div *ngIf="teams.length" class="container"></div>
 
 <!-- works here -->
