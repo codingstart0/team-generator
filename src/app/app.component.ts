@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 
+type Members = string[];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,10 +12,10 @@ import { NgFor, NgIf } from '@angular/common';
 })
 export class AppComponent {
   newMemberName = '';
-  members: string[] = [];
+  members: Members = [];
   errorMessage: string = '';
   numberOfTeams: number | '' = '';
-  teams: string[][] = [];
+  teams: Members[] = [];
 
   onInput(member: string) {
     this.newMemberName = member;
