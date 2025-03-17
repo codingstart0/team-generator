@@ -6,7 +6,7 @@ import { TeamComponent } from './team/team.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TeamComponent, NgFor],
+  imports: [TeamComponent, NgFor, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

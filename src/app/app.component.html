@@ -32,11 +32,7 @@
   </div>
 </div>
 
-<div  class="container">
-  <app-team></app-team>
-  <app-team></app-team>
-  <app-team></app-team>
-
+<div *ngIf="teams.length" class="container">
+  <app-team *ngFor="let team of teams; let i = index" [team]="team" [index]="i">
+  </app-team>
 </div>
-
-<!-- works here -->

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input, input  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,6 +8,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.css']
 })
-export class TeamComponent {
+export class TeamComponent implements OnInit {
+@Input() team: string[] = [];
+@Input() index = 0;
 
+constructor(){}
+  ngOnInit(): void {}
 }
