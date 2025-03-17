@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class TeamComponent implements OnInit {
 @Input() team: string[] = [];
 @Input() index = 0;
+currentDate = new Date();
 
 constructor(){}
   ngOnInit(): void {}
