@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
+import { TeamComponent } from './team/team.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [TeamComponent, NgFor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [NgFor, NgIf, RouterOutlet],
 })
 export class AppComponent {
   newMemberName = '';

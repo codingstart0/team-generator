@@ -28,10 +28,15 @@
       <button (click)="generateTeams()">Generate</button>
     </div>
 
-    <p *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</p>
+    <p class="error-msg">{{ errorMessage }}</p>
   </div>
 </div>
 
-<div *ngIf="teams.length" class="container"></div>
+<div  class="container">
+  <app-team></app-team>
+  <app-team></app-team>
+  <app-team></app-team>
+
+</div>
 
 <!-- works here -->

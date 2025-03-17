@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-team',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './team.component.html',
-  styleUrl: './team.component.css'
+  styleUrls: ['./team.component.css']
 })
 export class TeamComponent {
 
