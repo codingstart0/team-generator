@@ -2,7 +2,7 @@
   <div class="ui card">
     <h1>Team Generator</h1>
     <ul class="list">
-      <li *ngFor="let member of members">{{ member }}</li>
+      <li *ngFor="let member of members">{{ member.name }}</li>
     </ul>
 
     <div class="add-members-container">
@@ -35,8 +35,6 @@
 <div *ngFor="let team of teams; let i = index" class="container">
   <h3>{{ getTeamName(i) }}</h3>
   <ul class="list">
-    <li *ngFor="let member of team">{{ member }}</li>
+    <li *ngFor="let member of team">{{ member.name }}</li>
   </ul>
 </div>
-
-<!-- works here -->

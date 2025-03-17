@@ -2,13 +2,9 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 
-type Member = string;
-
-// TODO: Change Member type into object with properties. And make sure to use it in the template
-
-// type Member = {
-//   name: string;
-// };
+type Member = {
+  name: string;
+};
 
 type Members = Member[];
 
@@ -16,7 +12,7 @@ type Members = Member[];
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [NgFor, NgIf, RouterOutlet],
+  imports: [NgFor, NgIf],
 })
 export class AppComponent {
   newMemberName = '';
@@ -40,7 +36,7 @@ export class AppComponent {
       return;
     }
 
-    this.members.push(this.newMemberName);
+    this.members.push({ name: this.newMemberName});
     this.newMemberName = '';
     this.errorMessage = '';
   }
